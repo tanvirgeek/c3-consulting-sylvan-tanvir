@@ -24,9 +24,9 @@
   -->
   
   <!--
-  <meta itemprop="backgroundContainer" content="#background">
-  <meta itemprop="defaultBackground" content="/images/Sylvan.jpg" data-width="1800" data-height="1800" data-position="c" data-style="fill" data-color="#5E6A76">
+  <meta itemprop="defaultBackground" content="" data-width="1800" data-height="1800" data-position="c" data-style="fill" data-color="#eeecdf">
   -->
+  
   <!--
     Theme styles
     The Custom style presents Populr's end users with a color picker that sets the @custom-color variable
@@ -48,14 +48,11 @@
   <!-- Put your theme's HTML inside this script tag. The script tag will 
        prevent issues with quote escaping and invalid markup. -->
   <script id="theme" type="text/x-handlebars-template">
-    
-    <div id="fixed-header">
-    </div>
     <div id="cool-header">{{logo max_width=90 max_height=40}}</div>
 
     <div id="my-container">
 
-    <div id="my-pop-title">{{inline-logo-title}}</div>
+    <div id="my-pop-title">{{{title}}}</div>
 
     {{#region "columnizer" id="main-region" max_cols="3" max_auto_assets="0" dummy_content="T-1|T-1,T-1|T-1,T-1,T-1|I-1|I-2|I-1,I-2|I-1,I-2,I-3|V-1|V-2|V-1,V-2|V-1,V-2,V-3|D-1|D-3|D-1,D-3|D-1,D-2,D-3|E-1|E-2|E-1,E-2|E-1,E-2,E-3"}}
 
@@ -75,7 +72,7 @@
       {{/asset}}
 
       {{#asset "imagegroup" size="1"}}
-        {{{imageslider images width="754" height="475" crop-single=true prevnext-enabled=false pager-enabled=true}}}
+        {{{imageslider images width="810" height="475" crop-single=true prevnext-enabled=false pager-enabled=true}}}
         {{{title}}}
         {{{description}}}
       {{/asset}}
@@ -85,7 +82,7 @@
         {{{imageslider images width="365" height="230" crop-single=true prevnext-enabled=false pager-enabled=true}}}
         {{{title}}}
         {{{description}}}
-      
+        
       {{/asset}}
   
       {{#asset "imagegroup" size="3"}}

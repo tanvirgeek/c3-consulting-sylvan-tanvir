@@ -3,7 +3,6 @@
 // http://developers.populr.me/theming
 */
 
-
 // You must import variables.less before importing populr_mixins.less
 @import 'palette-custom';
 @import 'palette-Dark';
@@ -11,7 +10,6 @@
 @import 'variables';
 @import 'http://populr.me/assets/developers/populr_mixins.less';
 @import 'preboot';
-
 
 // Call preboot.less's reset to reduce browser inconsistencies
 #reset > .global-reset();
@@ -46,7 +44,7 @@ h1, h2, h3, h4, h5, .font-size-larger { }
 // Title text defaults
 // @headline-font-family is defined in variables.less
 
-.headline-text(@font-size:26px;@font-weight:bold;) {
+.headline-text(@font-size:20px;@font-weight:bold;) {
   font-family: @bold-font;
   font-size: @font-size;
   font-weight: @font-weight;
@@ -72,11 +70,11 @@ h1, h2, h3, h4, h5, .font-size-larger { }
     line-height:1.4;
 }
 // Body text defaults
-@body-font-family: 'Lora', Georgia, serif;;
+@body-font-family: 'Roboto', sans-serif;;
 
 .body-text() {
   font-family: @body-font-family;
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.5;
   text-align: left;
@@ -131,25 +129,24 @@ h1, h2, h3, h4, h5, .font-size-larger { }
 // Content wrapper
 #my-container{
     position: relative;
-    width:760px;
+    width:810px;
     margin:0 auto;
 }
 
 #main-region{
     position: relative;
+    background-color:white;
     &>div:last-of-type{
         padding-bottom:25px;
     }
     coor: @text-color;
 }
 
-
-
 #background { height: 300px; }
 #main-content {
     // margin: 300px auto 40px;
+    background-color:#eeecdf;
     margin: 0px auto 0px;
-    background-color: #fff;
     padding-bottom: 20px;
 }
 
@@ -162,7 +159,13 @@ h1, h2, h3, h4, h5, .font-size-larger { }
     overflow: hidden;
     text-align: center;
     padding-top: 40px;
+    background: #EEECDF url('@{base-url}/images/c3-consulting-logo.png') no-repeat left top;
 }
+.asset-size-1 {
+    .asset-title{ padding:0 20px;}
+    .description, .body{ padding:0 20px;}
+}
+
 #pop-title {
     .pop-title-text();
     text-align: center!important;
@@ -218,7 +221,7 @@ h1, h2, h3, h4, h5, .font-size-larger { }
 // Image asset styling
 #populr > #image-slider-themes > .basic();
 
-.populr-image-slider { margin-bottom: 15px;}
+.populr-image-slider { margin-bottom: 20px;}
 
 .prevnext{display:none!important;}
 
@@ -403,7 +406,7 @@ div#bottom-margin{
 
 .columnizer-row-inner{
     border-bottom: 2px solid @border-color;
-    padding-bottom:15px;
+    padding-bottom:7px;
 }
 
 .columnizer-row-contents-imagegroup{
@@ -423,44 +426,13 @@ div#bottom-margin{
     color:#808080
 }
 
-html,body{
-    height:100%;
-}
-
-#pop{
-    height:100%;
-    border-right:45px solid #EEECDF;
-    border-left:45px solid #EEECDF;
-    overflow-y: hidden;
-}
-
-#my-container{
-    position:absolute;
-    top:45px;
-    bottom:45px;
-    overflow-y:auto;
-    overflow-x:hidden;
-    width:100%;
-}
-
-#fixed-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:45px;
-    background-color:#EEECDF;
-    z-index:10000;
-}
 #fixed-footer{
-    position:fixed;
-    bottom:0;
-    left:0;
+    position:relative;
     width:100%;
     z-index:10000;
     height:53px;
     background-color:#EEECDF;
-    
+    margin-top:8px;
     #footer-inner{
         max-width: 750px;
         margin: 0 auto;
@@ -478,6 +450,7 @@ html,body{
             padding-top:12px;
             font-size:10px;
             text-align:center;
+            font-family:@body-font-family;
             a{
                 color:#464A4E;
                 &:hover{text-decoration:none;}

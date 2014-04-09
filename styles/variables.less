@@ -3,23 +3,25 @@
 // http://developers.populr.me/theming
 */
 
-
 // Use this statement to import Google Web Fonts
- @import '//fonts.googleapis.com/css?family=Open+Sans:300,700spo&.css';
- @import '//fonts.googleapis.com/css?family=PT+Sans:700';
- @import '//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic';
+
+ @import '//fonts.googleapis.com/css?family=Tienne:400,700';
+ @import '//fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500italic,500,700,700italic';
+ 
 // Use @base-url when specifying relative paths to images, fonts, 
 // and other resources.
-@base-url: '..';
 
+@base-url: '..';
 // @background-color holds the default background color for 
 // your pop. You can specify it here, but Populr will override 
 // this value once the user selects a background image for their 
 // pop. Populr automatically calculates the average color of any 
 // background image selected by the user, and stores that average 
 // color in @background-color.
+
 @background-color: #ccc;
 @border-color: #464a4e;
+
 /************************************************************************
 // The following values can be edited by Populr's users via dropdown 
 // menus in the pop editor.
@@ -28,7 +30,7 @@
 // @headline-font-family is changed with the Font dropdown 
 
 // @italic-font:'Libre Baskerville',Georgia, serif;
-@bold-font:'PT Sans', sans-serif;
+@bold-font:'Tienne', serif;
 @headline-font-family: @bold-font;
 // @custom-color is changed with the custome color picker in the Color 
 // dropdown. The color picker will only be available to your users if 
@@ -72,36 +74,43 @@
 
 .columnizer-row-inner {
   margin: 15px auto;
-  max-width: 760px;
+  max-width: 810px;
   padding-top: 15px;
 }
 
 .columnizer-col {
     float: left;
     
-    .columnizer-cols1 & { width: 760px; }
+    .columnizer-cols1 & { width: 810px; }
     .columnizer-cols2 & {
-      width: 380px;
-      &:first-child { }
+      width: 405px;
     }
     
     .columnizer-cols3 & {
-      width: 253px;
-      &:last-child { width:254px; }
+      width: 270px;
     }
 }
+
 .columnizer-cols2 .columnizer-col:first-child .asset-inner{
     border-right:1px dotted @border-color;
+    padding:0 20px;
 }
+.columnizer-cols2 .columnizer-col:last-child .asset-inner{
+    padding:0 20px;
+}
+
+.columnizer-cols3 .columnizer-col .asset-inner{
+    padding:0 20px;
+}
+
 .columnizer-cols3 .columnizer-col:first-child .asset-inner{
     border-right:1px dotted @border-color;
 }
+
 .columnizer-cols3 .columnizer-col:last-child .asset-inner{
     border-left:1px dotted @border-color;
 }
-.asset-inner{
-    padding:0 8px;
-}
+
 // clearfix for columnizer rows
 .columnizer-row:after { display: block; visibility: hidden; height: 0; clear: both; content: ' '; }
 .columnizer-row { *zoom: 1; }
